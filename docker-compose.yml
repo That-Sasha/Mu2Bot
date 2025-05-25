@@ -1,0 +1,13 @@
+services:
+  mu2bot:
+    build: .
+    container_name: mu2bot-${ENV}
+    environment:
+      - ENV=${ENV}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+    volumes:
+        - "${SERVICE_LIBS_PATH}/data:/data"
+    restart: unless-stopped
+        
