@@ -1,1 +1,2 @@
-pip freeze --isolated > requirements.txt
+conda run -n mu2env pip freeze --isolated > mu2bot/requirements.txt
+docker compose build
